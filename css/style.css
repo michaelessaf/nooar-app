@@ -1,0 +1,57 @@
+* { margin:0; padding:0; } /* to remove the top and left whitespace */
+* {
+    box-sizing: border-box;
+}
+html, body { width:100%; height:100%; } /* just to be sure these are full screen*/
+
+body{
+  background-color: #f4f4f4;
+}
+#brandLogo {
+  height:4rem;
+}
+#header {
+  background-color:white;
+  padding-left: 1rem;
+}
+#flexContainer {
+  margin-top:4rem;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#card{
+  width: 20rem;
+  margin: 6rem;
+}
+
+#curves{
+  flex-grow: 3;
+  height:30rem;
+}
+
+
+#ruler{
+  position:fixed;
+  top:0;
+  margin:2rem -2.0rem;
+  padding: 0rem;
+}
+
+#rightArrowicn{
+  display:inline-block;
+  font-size: 2.5rem;
+  padding-left: 1.5rem;
+  color:lightgrey;
+}
+
+.flexItem p{
+  display: inline-block;
+  vertical-align:middle;
+}
+
+p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto ,"Helvetica Neue",Arial,sans-serif;
+}

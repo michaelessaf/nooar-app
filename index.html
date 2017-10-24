@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>NOOAR</title>
+
+  <!-- Bootstrap for styling -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"> -->
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+
+</head>
+<body class="container">
+  <div id="header">
+  <img src = "img/logo.jpg" id="brandLogo">
+  </div>
+  <div id="ruler">
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    version="1.1"
+    width="1020mm"
+    height="20mm"
+    viewBox="-10 -10 1020 20"
+    >
+    <defs>
+        <g id="ticks" stroke="black">
+            <line id="mm-tick" x1="-0.1" x2="1000.1" stroke-width="1.4142135623" stroke-dasharray="0.2 0.8"/>
+            <line id="cm-tick" x1="-0.15" x2="1000.15" stroke-width="2" stroke-dasharray="0.3 9.7"/>
+            <line id="5cm-tick" x1="49.85" x2="1000.15" stroke-width="2.8284271247" stroke-dasharray="0.3 99.7"/>
+            <line id="dm-tick" x1="-0.2" x2="1000.2" stroke-width="4" stroke-dasharray="0.4 99.6"/>
+        </g>
+        <line id="line" x2="1000" stroke="black" stroke-width="0.3"/>
+        <g id="cm-numbers" text-anchor="middle" font-size="3">
+            <text x="10">1</text>
+            <text x="20">2</text>
+            <text x="30">3</text>
+            <text x="40">4</text>
+            <text x="60">6</text>
+            <text x="70">7</text>
+            <text x="80">8</text>
+            <text x="90">9</text>
+        </g>
+        <g id="5cm-numbers" text-anchor="middle" font-size="4">
+            <text x="50">5</text>
+            <text x="150">15</text>
+            <text x="250">25</text>
+            <text x="350">35</text>
+            <text x="450">45</text>
+            <text x="550">55</text>
+            <text x="650">65</text>
+            <text x="750">75</text>
+            <text x="850">85</text>
+            <text x="950">95</text>
+        </g>
+        <g id="dm-numbers" text-anchor="middle" font-size="5">
+            <text>0</text>
+            <text x="100">10</text>
+            <text x="200">20</text>
+            <text x="300">30</text>
+            <text x="400">40</text>
+            <text x="500">50</text>
+            <text x="600">60</text>
+            <text x="700">70</text>
+            <text x="800">80</text>
+            <text x="900">90</text>
+            <text x="1000">100</text>
+        </g>
+    </defs>
+    <use xlink:href="#ticks"/>
+    <use xlink:href="#line"/>
+    <use y="5" xlink:href="#cm-numbers"/>
+    <use y="6" xlink:href="#5cm-numbers"/>
+    <use y="7" xlink:href="#dm-numbers"/>
+</svg>
+</div>
+
+  <div id=flexContainer>
+    <svg id="card" preserveAspectRatio="xMidYMin" class="flexItem" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 355 219"><defs><style>.e5b9d3ab-58d0-470a-9c58-227b86ab4b1c{font-size:18px;font-family:MyriadPro-Regular, Myriad Pro;}</style></defs><title>card</title><path d="M422,522a11,11,0,0,1,11,11V728a11,11,0,0,1-11,11H91a11,11,0,0,1-11-11V533a11,11,0,0,1,11-11H422m0-1H91a12,12,0,0,0-12,12V728a12,12,0,0,0,12,12H422a12,12,0,0,0,12-12V533a12,12,0,0,0-12-12Z" transform="translate(-79 -521)"/><text class="e5b9d3ab-58d0-470a-9c58-227b86ab4b1c" transform="translate(31.37 174.37)"><tspan xml:space="preserve">9999  9999  9999  9999</tspan></text></svg>
+
+    <div id="slidecontainer" class="flexItem">
+      <input type="range" min="10" max="30" value="20" class="slider" id="Range">
+    </div>
+
+    <div class="flexItem" id="instructionsMain">
+      <p>Place your credit card here. Adjust the slider until our card is the same size as yours.</p>
+      <a href="measurement.html"><i class="fa fa-arrow-circle-right" id="rightArrowicn" aria-hidden="true"></i></a>
+    </div>
+  </div>
+
+  <!-- include JavaScript file -->
+  <script src="js/index.js"></script>
+</body>
+</html>
