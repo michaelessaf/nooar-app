@@ -9,29 +9,52 @@ body{
 }
 #brandLogo {
   height:4rem;
+  padding-left: 9rem;
 }
 #header {
   background-color:white;
-  padding-left: 1rem;
+
+  width: 100%;
+  margin: 0%;
 }
 #flexContainer {
   margin-top:4rem;
   display:flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+#SuperFlexContainer{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
+SuperFlexItem{
+  margin: auto;
 }
 
 #card{
   width: 20rem;
   margin: 6rem;
+  display: block;
+  top: 50%;
+  left: 50%;
+  /*transform: translate(-30%, -30%);*/
 }
+
 
 #curves{
-  flex-grow: 3;
+  flex-grow: 2;
   height:30rem;
+  padding-left: 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  /*position: absolute;
+  left:128px;*/
 }
-
+#slidecontainer{
+  text-align: center;
+}
 
 #ruler{
   position:fixed;
@@ -40,18 +63,196 @@ body{
   padding: 0rem;
 }
 
-#rightArrowicn{
-  display:inline-block;
-  font-size: 2.5rem;
-  padding-left: 1.5rem;
-  color:lightgrey;
+i{
+  display: inline;
+  font-size: 36pt;
+  color:darkgrey;
+  vertical-align: middle;
 }
 
+i:hover{
+  color: white;
+  //inline stlye as well
+}
+.fa-arrow-circle-right{
+  padding-left: 1.5rem;
+  float:right;
+}
+.fa-arrow-circle-left{
+  padding-right: 1.5rem;
+}
 .flexItem p{
   display: inline-block;
   vertical-align:middle;
+  margin:auto;
 }
 
 p {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto ,"Helvetica Neue",Arial,sans-serif;
+  font-size: 1.1rem
+}
+
+/*form styles*/
+/*#msform {
+	width: 400px;
+	margin: 50px auto;
+	text-align: center;
+	position: relative;
+}*/
+/*#msform fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+
+	/*stacking fieldsets above each other*/
+	/*position: absolute;*/
+/*}*/
+/*Hide all except first fieldset*/
+fieldset {
+	display: none;
+  text-align: center;
+}
+/*inputs*/
+/*#msform input, #msform textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}*/
+/*buttons*/
+/*#msform .action-button {
+	width: 100px;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}*/
+#msform .action-button:hover, #msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+/*headings*/
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+}
+#progressbar li {
+	list-style-type: none;
+	color: black;
+	text-transform: uppercase;
+	font-size: 9px;
+	width: 33.33%;
+	float: left;
+	position: relative;
+  text-align: center;
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 10px;
+	color: #333;
+	background: lightgrey;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none;
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+	background: white;
+	color: black;
+}
+
+.ruler, .ruler li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+}
+/* IE6-7 Fix */
+.ruler, .ruler li {
+    *display: inline;
+}
+.ruler {
+    /*background: lightYellow;*/
+    /*box-shadow: 0 -1px 1em hsl(60, 60%, 84%) inset;*/
+    /*border-radius: 2px;*/
+    /*border: 1px solid #ccc;*/
+    color: #ccc;
+    margin: 0;
+    height: 3em;
+    padding-right: 1cm;
+    white-space: nowrap;
+    overflow:hidden;
+}
+.ruler li {
+    padding-left: 1cm;
+    width: 2em;
+    margin: .64em -1em -.64em;
+    text-align: center;
+    position: relative;
+    /*overflow:hidden;*/
+
+    /*text-shadow: 1px 1px hsl(60, 60%, 84%);*/
+}
+.ruler li:before {
+    content: '';
+    position: absolute;
+    border-left: 1px solid #ccc;
+    height: .64em;
+    top: -.64em;
+    right: 1em;
+    overflow:hidden;
+
+}
+.clothesIcon{
+  height: 10rem;
+  /*padding-top: 1rem;*/
+  padding-bottom: 2rem;
 }
